@@ -11,7 +11,7 @@ set shiftwidth=4
 set noexpandtab
 
 "===== closing brackets ====="
-inoremap " "" <left>
+inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
