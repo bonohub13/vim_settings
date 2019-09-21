@@ -1,7 +1,8 @@
 "===== color settings ====="
 syntax enable
 set t_Co=256
-colorscheme atom-dark-256
+set bg=dark
+colorscheme gruvbox 
 
 "===== indent settings =====" 
 set autoindent
