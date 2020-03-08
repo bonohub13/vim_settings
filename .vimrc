@@ -11,6 +11,10 @@ set tabstop=4
 set shiftwidth=4
 set noexpandtab
 
+" ==== for html/xml files, 2 spaces ====="
+autocmd Filetype xml setlocal ts=2 sw=2
+autocmd Filetype html setlocal ts=2 sw=2
+
 "===== closing brackets ====="
 inoremap " ""<left>
 inoremap ' ''<left>
@@ -38,6 +42,7 @@ let g:neocomplete#skip_auto_completion_time = ""
 
 " normal settings " 
 nmap tt :terminal<CR>
+nmap tv :vertical terminal<CR>
 nmap sp :split<CR>
 nmap vp :vsplit<CR>
 nnoremap nw <C-w><C-w>p
