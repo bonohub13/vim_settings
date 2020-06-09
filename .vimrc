@@ -12,8 +12,13 @@ set shiftwidth=4
 set noexpandtab
 
 " ==== for html/xml files, 2 spaces ====="
-autocmd Filetype xml setlocal ts=2 sw=2
-autocmd Filetype html setlocal ts=2 sw=2
+augroup fileTypeIndent
+	autocmd!
+	autocmd BufNewFile,BufRead *.xml setlocal ts=2 softtabstop=2 sw=2
+	autocmd BufNewFile,BufRead *.html setlocal ts=2 softtabstop=2 sw=2
+	autocmd BufNewFile,BufRead *.yaml setlocal ts=2 softtabstop=2 sw=2
+	autocmd BufNewFile,BufRead *.txt setlocal ts=2 softtabstop=2 sw=2
+augroup END
 
 "===== closing brackets ====="
 inoremap " ""<left>
@@ -35,6 +40,8 @@ set cursorline
 "===== default settings =====" 
 filetype plugin on
 filetype indent on
+
+set mouse=a
 
 " neocomplete " 
 let g:neocomplete#enable_at_startup = 1
