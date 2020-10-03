@@ -29,6 +29,12 @@ inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 
+"local settings for closing brackets"
+augroup fileTypeClosingBrackets
+    autocmd!
+    autocmd BufNewFile,BufRead *.md inoremap < <><left>
+augroup END
+
 set showmatch
 
 "===== nobackup files ====="
